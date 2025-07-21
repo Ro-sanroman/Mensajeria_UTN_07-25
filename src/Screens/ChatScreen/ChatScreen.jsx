@@ -4,7 +4,6 @@ import MessageList from "../../Components/MessageList/MessageList";
 import styles from "../../Components/MessageList/MessageList.module.css";
 import { useParams } from "react-router";
 import { getContactById } from "../../services/contactServices.js";
-import EmojiMenu from "../../Components/EmojiMenu/EmojiMenu.jsx";
 
 const ChatScreen = () => {
   const { contact_id } = useParams();
