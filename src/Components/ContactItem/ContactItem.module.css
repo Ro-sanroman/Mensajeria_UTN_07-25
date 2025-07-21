@@ -1,6 +1,5 @@
 :global(a) {
   text-decoration: none;
-  color: inherit;
 }
 
 .contactItem {
@@ -8,13 +7,11 @@
   align-items: center;
   gap: 12px;
   padding: 12px 16px;
-  border-bottom: 1px solid #e0e0e0;
-  background-color: #fff;
-  transition: background-color 0.2s ease;
+  background-color: #2c2c2c;
 }
 
 .contactItem:hover {
-  background-color: #f0f2f5;
+  background-color: #383838;
   cursor: pointer;
 }
 
@@ -29,7 +26,7 @@
 .contactName {
   font-size: 16px;
   font-weight: 600;
-  color: #111;
+  color: #ffffff;
   margin: 0;
   flex-grow: 1;
 }

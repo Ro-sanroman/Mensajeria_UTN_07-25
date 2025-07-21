@@ -19,7 +19,7 @@ const MessageList = ({ messages, deleteMessageById }) => {
       />
     );
   });
-  return <div>{messages_list}</div>;
+  return <div className={styles.messageList}>{messages_list}</div>;
 };
 
 export default MessageList;

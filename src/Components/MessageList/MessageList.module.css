@@ -132,3 +132,13 @@ input::placeholder {
   color: #dbd6d6;
   font-size: 17px;
 }
+
+.messageList {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #e5ddd5;
+}

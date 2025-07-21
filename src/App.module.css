@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.contactContainer {
+  width: 30%;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+}
+
+.chatContainer {
+  width: 70%;
+  background-color: #e5ddd5;
+  display: flex;
+  flex-direction: column;
+}
+
+.placeholder {
+  margin: auto;
+  font-size: 1.2rem;
+  color: #999;
+}
