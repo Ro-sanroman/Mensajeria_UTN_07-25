@@ -11,9 +11,6 @@ const ContactItem = ({ contact }) => {
         <span className={styles.contactConection}>
           Last Connection: {contact.lastConnection}
         </span>
-        <span className={styles.contactStatus}>
-          Connection Status: {contact.connectionStatus}
-        </span>
       </div>
     </Link>
   );

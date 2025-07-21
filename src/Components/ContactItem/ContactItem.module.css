@@ -1,3 +1,8 @@
+:global(a) {
+  text-decoration: none;
+  color: inherit;
+}
+
 .contactItem {
   display: flex;
   align-items: center;
@@ -35,14 +40,4 @@
   display: flex;
   margin-left: auto;
   text-align: right;
-}
-
-.contactStatus {
-  font-size: 12px;
-  color: #4caf50;
-  display: flex;
-  margin-left: auto;
-  text-align: right;
-  text-decoration: none;
-  outline: none;
 }
