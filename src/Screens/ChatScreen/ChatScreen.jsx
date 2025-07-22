@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MessageList from "../../Components/MessageList/MessageList";
 import styles from "../../Components/MessageList/MessageList.module.css";
 import { useParams } from "react-router";
@@ -11,7 +11,18 @@ const ChatScreen = () => {
   const contact_selected = getContactById(contact_id);
   console.log(contact_selected);
 
-  const [messages, setMessage] = useState(contact_selected.messages);
+  const [messages, setMessage] = useState(
+    contact_selected ? contact_selected.messages : []
+  );
+
+  useEffect(() => {
+    const contact = getContactById(contact_id);
+    if (contact) {
+      setMessage(contact.messages);
+    } else {
+      setMessage([]);
+    }
+  }, [contact_id]);
 
   const [mensajeInput, setMensajeInput] = useState("");
 
