@@ -1,15 +1,13 @@
-import React, { Profiler } from "react";
-import { useState } from "react";
+import React from "react";
 import ContactList from "../../Components/ContactList/ContactList";
-import { getContactList } from "../../services/contactServices.js";
+import { getContactList } from "../../services/contactServices";
 
 const ContactScreen = () => {
   const contacts = getContactList();
-  const [contactsState, setContactsState] = useState(contacts);
 
   return (
     <div>
-      <ContactList contacts={contactsState} />
+      <ContactList contacts={contacts} />
     </div>
   );
 };
