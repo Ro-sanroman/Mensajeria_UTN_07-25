@@ -1,5 +1,6 @@
 import React from "react";
 import Message from "../Message/Message.jsx";
+import styles from "./MessageList.module.css";
 
 const MessageList = ({ messages, deleteMessageById }) => {
   if (messages.length === 0) {

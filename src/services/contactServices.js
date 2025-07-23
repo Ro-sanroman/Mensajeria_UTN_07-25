@@ -4,6 +4,7 @@ const contacts = [
     name: "Marta",
     description: "Durmiendo",
     avatar: "https://i.pravatar.cc/150?img=5",
+    last_connection: "En linea",
     messages: [
       {
         emisor: "YO",
@@ -33,6 +34,7 @@ const contacts = [
     name: "Juan",
     description: "En el trabajo",
     avatar: "https://i.pravatar.cc/150?img=3",
+    last_connection: "Ult. vez hace 3 horas",
     messages: [
       {
         emisor: "YO",
@@ -62,6 +64,7 @@ const contacts = [
     name: "Ana",
     description: "En el gimnasio",
     avatar: "https://i.pravatar.cc/150?img=2",
+    last_connection: "Ult. vez hace 58 minutos",
     messages: [
       {
         emisor: "YO",
@@ -91,6 +94,7 @@ const contacts = [
     name: "Luis",
     description: "De vacaciones",
     avatar: "https://i.pravatar.cc/150?img=4",
+    last_connection: "Ult. vez hace 1 hora",
     messages: [
       {
         emisor: "YO",
@@ -120,6 +124,7 @@ const contacts = [
     name: "Sofia",
     description: "Estudiando",
     avatar: "https://i.pravatar.cc/150?img=10",
+    last_connection: "Ult. vez hace 13 minutos",
     messages: [
       {
         emisor: "YO",
@@ -149,12 +154,14 @@ const contacts = [
     name: "Carlos",
     description: "Jugando videojuegos",
     avatar: "https://i.pravatar.cc/150?img=6",
+    last_connection: "Ult. vez hace 9 minutos",
     messages: [
       {
         emisor: "YO",
         hora: "23:10",
         id: 1,
         texto: "Ayer me di cuenta que no te habia escrito",
+        last_connection: "Ult. vez hace 7 horas",
         status: "visto",
       },
       {
@@ -178,6 +185,7 @@ const contacts = [
     name: "Laura",
     description: "Leyendo un libro",
     avatar: "https://i.pravatar.cc/150?img=9",
+    last_connection: "Ult. vez hace 1 hora",
     messages: [
       {
         emisor: "YO",
@@ -207,6 +215,7 @@ const contacts = [
     name: "Pedro",
     description: "Cocinando",
     avatar: "https://i.pravatar.cc/150?img=7",
+    last_connection: "Ult. vez hace 30 minutos",
     messages: [
       {
         emisor: "YO",
@@ -227,6 +236,66 @@ const contacts = [
         hora: "23:12",
         id: 3,
         texto: "La de palta y tomate",
+        status: "visto",
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "Julian",
+    description: "Si la vida te da limones, haz limonada",
+    last_connection: "Ult. vez hace 12 horas",
+    avatar: "https://i.pravatar.cc/150?img=11",
+    messages: [
+      {
+        emisor: "YO",
+        hora: "23:10",
+        id: 1,
+        texto: "Viste el partido anoche?",
+        status: "visto",
+      },
+      {
+        emisor: "OTRO",
+        hora: "23:11",
+        id: 2,
+        texto: "Fue terrible",
+        status: "visto",
+      },
+      {
+        emisor: "YO",
+        hora: "23:12",
+        id: 3,
+        texto: "Espero que mejore porque sino me mato",
+        status: "visto",
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: "Gaby",
+    description: "🐱🐱🐱",
+    avatar: "https://i.pravatar.cc/150?img=14",
+    last_connection: "Ult. vez hace 2 horass",
+    messages: [
+      {
+        emisor: "YO",
+        hora: "23:10",
+        id: 1,
+        texto: "No puse a lavar la remera",
+        status: "visto",
+      },
+      {
+        emisor: "OTRO",
+        hora: "23:11",
+        id: 2,
+        texto: "No la otra que te iba a prestar",
+        status: "visto",
+      },
+      {
+        emisor: "YO",
+        hora: "23:12",
+        id: 3,
+        texto: "La proxima te la traigo",
         status: "visto",
       },
     ],

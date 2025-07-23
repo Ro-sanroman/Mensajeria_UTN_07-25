@@ -8,9 +8,7 @@ const ContactItem = ({ contact }) => {
       <div className={styles.contactItem}>
         <img className={styles.avatar} src={contact.avatar} />
         <h2 className={styles.contactName}>{contact.name}</h2>
-        <span className={styles.contactConection}>
-          Last Connection: {contact.lastConnection}
-        </span>
+        <span className={styles.contactConection}>{contact.conection}</span>
       </div>
     </Link>
   );

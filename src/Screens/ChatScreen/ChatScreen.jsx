@@ -1,12 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import MessageList from "../../Components/MessageList/MessageList";
-import styles from "../../Components/MessageList/MessageList.module.css";
+import styles from "../ChatScreen/ChatScreen.module.css";
 import { useParams } from "react-router";
 import { getContactById } from "../../services/contactServices.js";
 
 const ChatScreen = () => {
   const { contact_id } = useParams();
+  const contactSelected = getContactById(contact_id);
 
   const contact_selected = getContactById(contact_id);
   console.log(contact_selected);
@@ -32,14 +33,6 @@ const ChatScreen = () => {
     });
     setMessage(new_message_list);
   };
-
-  const deleteAllMessages = () => {
-    setMessage([]);
-  };
-  /* Practica:
-  darkMode
-  resetMessages
-   */
 
   const addNewMessage = (text) => {
     const new_message = {
@@ -83,35 +76,49 @@ const ChatScreen = () => {
   }
 
   return (
-    <div>
-      {messages.length > 0 && (
-        <button
-          onClick={() => deleteAllMessages()}
-          className={styles.buttonDeleteAll}
-        >
-          Borrar todos los mensajes
-        </button>
-      )}
-      <button
-        onClick={() => deleteMessageById(1)}
-        className={styles.buttonDeleteFirst}
-      >
-        Eliminar el primer mensaje
-      </button>
-      <MessageList messages={messages} deleteMessageById={deleteMessageById} />
+    <div className={styles.chatScreen}>
+      <div className={styles.chatHeader}>
+        <div className={styles.contactInfoContainer}>
+          <img
+            src={contactSelected.avatar}
+            className={styles.avatar}
+            alt="Avatar"
+          />
+          <div className={styles.contactInfo}>
+            <h2 className={styles.name}>{contactSelected.name}</h2>
+            <h2 className={styles.lastConnection}>
+              {contactSelected.last_connection}
+            </h2>
+          </div>
+        </div>
+        <div className={styles.iconsContainer}>
+          <button className={styles.iconButton}>
+            <i class="bi bi-camera-video"></i>
+            <i class="bi bi-telephone"></i>
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+      <div className={styles.messageListWrapper}>
+        <MessageList
+          messages={messages}
+          deleteMessageById={deleteMessageById}
+        />
+      </div>
+
       <form onSubmit={handleSubmitSendMessageForm}>
         <div className={styles.formContainer}>
-          <label className={styles.label} htmlFor="message">
-            {" "}
-          </label>
+          <label className={styles.label} htmlFor="message"></label>
+
           <div className={styles.iconsContainer}>
             <button className={styles.buttonEmoji} type="button">
-              <i class="bi bi-emoji-smile"></i>
+              <i className="bi bi-emoji-smile"></i>
             </button>
             <button className={styles.buttonClip} type="button">
-              <i class="bi bi-paperclip"></i>
+              <i className="bi bi-paperclip"></i>
             </button>
           </div>
+
           <input
             className={styles.input}
             id="message"
@@ -121,6 +128,7 @@ const ChatScreen = () => {
             value={mensajeInput}
             onChange={(event) => setMensajeInput(event.target.value)}
           />
+
           <button className={styles.buttonSendForm} type="submit">
             {sendIcon}
           </button>

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../MessageList/MessageList.module.css";
+import styles from "../Message/Message.module.css";
 
 const Message = ({ id, speaker, hora, texto, status, deleteMessageById }) => {
   const getStatusIcon = () => {

@@ -19,7 +19,22 @@ function App() {
           <Route
             path="/"
             element={
-              <div className={styles.placeholder}>Seleccioná un contacto</div>
+              <div className={styles.placeholder}>
+                <i class="bi bi-whatsapp"></i>
+                <span className={styles.placeholderTitle}>
+                  Whatsapp para Windows
+                </span>
+                <span className={styles.placeholderSubtitle}>
+                  Envía y recibe mensajes sin tener tu teléfono conectado. vez.
+                </span>
+                <span className={styles.placeholderSubtitle2}>
+                  Usa Whatsapp en hasta 4 dispositivos vinculados y 1 teléfono a
+                  la vez.
+                </span>
+                <span className={styles.placeholderFeet}>
+                  <i class="bi bi-lock"></i>Cifrado de extremo a extremo
+                </span>
+              </div>
             }
           />
         </Routes>

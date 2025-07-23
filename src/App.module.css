@@ -1,25 +1,88 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 200%;
+  overflow-y: hidden;
+}
+
 .container {
   display: flex;
   height: 100vh;
-  width: 100%;
+  background-color: #2c2c2c;
+  width: 100.6%;
+  color: #e1e1e1;
+  overflow-y: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contactContainer {
-  width: 30%;
-  border-right: 1px solid #ccc;
-  overflow-y: auto;
-  background-color: #f0f0f0;
+  width: 320px;
+  border-right: 1px solid #2a3942;
+  overflow-y: scroll;
+  background-color: #2c2c2c;
+}
+
+.contactContainer::-webkit-scrollbar {
+  width: 2px;
+}
+
+.contactContainer::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 10px;
+}
+
+.contactContainer::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 0px solid #2c2c2c;
+}
+
+.contactContainer::-webkit-scrollbar-thumb:hover {
+  width: 3px;
 }
 
 .chatContainer {
-  width: 70%;
-  background-color: #e5ddd5;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #2c2c2c;
+  position: relative;
+}
+
+.placeholder {
+  color: #484848;
+  font-size: 74px;
+  text-align: center;
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
 }
 
-.placeholder {
-  margin: auto;
-  font-size: 1.2rem;
-  color: #999;
+.placeholderTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.placeholderSubtitle {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #888888;
+}
+
+.placeholderSubtitle2 {
+  font-size: 16px;
+  color: #888888;
+}
+
+.placeholderFeet {
+  font-size: 14px;
+  color: #888888;
+  margin-top: 20px;
+  text-align: bottom;
+  display: flex;
+  justify-content: center;
+  padding-top: 170px;
 }
