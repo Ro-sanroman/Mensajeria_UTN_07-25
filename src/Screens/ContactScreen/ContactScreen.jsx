@@ -3,6 +3,7 @@ import ContactList from "../../Components/ContactList/ContactList";
 import { getContactList } from "../../services/contactServices";
 import { useState, useEffect } from "react";
 import SearchContact from "../../Components/SearchContact/SearchContact";
+import MenuBar from "../../Components/MenuBar/MenuBar";
 import styles from "./ContactScreen.module.css";
 
 const ContactScreen = () => {
@@ -22,12 +23,17 @@ const ContactScreen = () => {
 
   return (
     <div className={styles.container}>
-      <SearchContact
-        value={searchText}
-        onChange={setSearchText}
-        onClear={handleClear}
-      />
-      <ContactList contacts={filtered} />
+      <div className={styles.menuBar}>
+        <MenuBar />
+      </div>
+      <div className={styles.content}>
+        <SearchContact
+          value={searchText}
+          onChange={setSearchText}
+          onClear={handleClear}
+        />
+        <ContactList contacts={filtered} />
+      </div>
     </div>
   );
 };

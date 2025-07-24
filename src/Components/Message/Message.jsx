@@ -2,6 +2,8 @@ import React from "react";
 import styles from "../Message/Message.module.css";
 
 const Message = ({ id, speaker, hora, texto, status, deleteMessageById }) => {
+  console.log("speaker", speaker);
+  const isMine = speaker === "YO";
   const getStatusIcon = () => {
     if (status === "no-visto") {
       return (
@@ -23,17 +25,13 @@ const Message = ({ id, speaker, hora, texto, status, deleteMessageById }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.delteButtonContainer}>
-        <button
-          className={styles.deleteButton}
-          onClick={() => deleteMessageById(id)}
-        >
-          <i class="bi bi-trash3"></i>
-        </button>
-      </div>
-      <div className={styles.messagesContainer}>
-        <div className={styles.textoContainer}>
+    <div className={styles.messagesContainer}>
+      <div
+        className={`${styles.message} ${
+          isMine ? styles.messageRight : styles.messageLeft
+        }`}
+      >
+        <div>
           <h2 className={styles.texto}>{texto}</h2>
           <div className={styles.extraContainer}>
             <span className={styles.time}>{hora}</span>

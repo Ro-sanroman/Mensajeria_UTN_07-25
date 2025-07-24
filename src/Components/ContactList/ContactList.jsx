@@ -6,16 +6,7 @@ const ContactList = ({ contacts }) => {
   return (
     <div>
       {contacts.map((contact) => (
-        <NavLink
-          to={`/contact/${contact.id}/messages`}
-          key={contact.id}
-          style={({ isActive }) => ({
-            display: "block",
-            textDecoration: "none",
-            color: isActive ? "blue" : "black",
-            backgroundColor: isActive ? "#f0f0f0" : "transparent",
-          })}
-        >
+        <NavLink to={`/contact/${contact.id}/messages`} key={contact.id}>
           <ContactItem contact={contact} />
         </NavLink>
       ))}

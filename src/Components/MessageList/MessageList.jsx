@@ -11,7 +11,7 @@ const MessageList = ({ messages, deleteMessageById }) => {
     return (
       <Message
         key={message.id}
-        speaker={message.speaker}
+        speaker={message.emisor}
         hora={message.hora}
         texto={message.texto}
         status={message.status}

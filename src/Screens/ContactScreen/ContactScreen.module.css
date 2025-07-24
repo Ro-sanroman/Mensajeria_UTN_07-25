@@ -1,6 +1,23 @@
 .container {
   display: flex;
   flex-direction: column;
+}
+
+.menuBar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: left;
+  position: absolute;
+  gap: 5px;
+  width: 45px;
+  background-color: #202020;
   height: 100%;
-  overflow: hidden;
+  border-right: 1px solid #212121;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
 }
