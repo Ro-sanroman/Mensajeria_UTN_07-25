@@ -149,3 +149,9 @@ input::placeholder {
   justify-content: flex-end;
   align-items: flex-end;
 }
+
+@media screen and (max-width: 625px) {
+  .lastConnection {
+    white-space: nowrap;
+  }
+}

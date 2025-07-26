@@ -21,3 +21,9 @@
   flex-direction: column;
   padding-left: 50px;
 }
+
+@media screen and (max-width: 525px) {
+  .content {
+    padding-left: 0px;
+  }
+}

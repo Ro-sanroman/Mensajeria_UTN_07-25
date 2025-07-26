@@ -85,3 +85,31 @@ body {
   justify-content: center;
   padding-top: 170px;
 }
+
+@media screen and (max-width: 870px) {
+  .placeholder {
+    font-size: 65px;
+  }
+
+  .placeholderTitle {
+    font-size: 18px;
+  }
+
+  .placeholderSubtitle {
+    font-size: 14px;
+  }
+
+  .placeholderSubtitle2 {
+    font-size: 14px;
+  }
+
+  .placeholderFeet {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .placeholder {
+    visibility: hidden;
+  }
+}
