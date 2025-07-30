@@ -22,8 +22,19 @@
   padding-left: 50px;
 }
 
-@media screen and (max-width: 525px) {
+@media (max-width: 570px) {
   .content {
-    padding-left: 0px;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .content {
+    display: flex;
+    width: 100px;
+    flex-direction: column;
   }
 }

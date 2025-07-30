@@ -65,3 +65,66 @@
   gap: 30px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 570px) {
+  .container {
+    display: flex;
+    padding-left: 140px;
+  }
+  .wrapper {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container {
+    display: flex;
+    padding-left: 165px;
+  }
+  .wrapper {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    display: flex;
+    padding-left: 160px;
+  }
+  .wrapper {
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    display: flex;
+    width: 40%;
+    padding-left: 135px;
+  }
+  .header {
+    font-size: 10px;
+  }
+  .wrapper {
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    padding-left: 120px;
+  }
+  .header {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  .wrapper {
+    width: 200px;
+    height: 5px;
+  }
+}

@@ -155,3 +155,16 @@ input::placeholder {
     white-space: nowrap;
   }
 }
+
+@media (max-width: 570px) {
+  .chatScreen {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
